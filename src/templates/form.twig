@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Form</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	Name Key: {{token.namekey}}<br> 
+	Name: {{token.name}}<br>
+    Value Key: {{token.valuekey}}<br> 
+    Value: {{token.value}}
+
+	<form action="/formCreate" method="post" accept-charset="utf-8">
+		<input type="hidden" name={{token.namekey}} value={{token.name}}>
+    	<input type="hidden" name={{token.valuekey}} value={{token.value}}>
+
+		<input type="text" name="name" placeholder="Name">
+		<input type="number" name="price" placeholder="Price">
+		<button type="submit">Salvar</button>
+
+	</form>
+
+
+</body>
+</html>
